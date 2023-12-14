@@ -13,7 +13,6 @@ public class ArrayPairSum {
     public static int arrayPairSum(int[] nums) {
         int sum = 0;
         nums = Arrays.stream(nums).sorted().toArray();
-
         for (int i = 0; i < nums.length; i=i+2) {
             sum += nums[i];
         }
