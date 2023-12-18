@@ -15,7 +15,6 @@ public class LargestOddNumber {
         for (int i = 1; i <= length; i++) {
             if ((num.charAt(length - i) - 48) % 2 == 1)
                 return num.substring(0,length - i + 1);
-
         }
         return "";
     }
