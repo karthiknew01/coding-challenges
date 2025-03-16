@@ -26,10 +26,6 @@ public class RemoveElement {
             i++;
         }
 
-        for (int j = 0; j < len; j++) {
-            System.out.println(nums[j]);
-        }
-
         return len;
     }
 
