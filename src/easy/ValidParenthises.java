@@ -1,2 +1,4 @@
-package easy;public class ValidParenthises {
+package easy;
+
+public class ValidParenthises {
 }

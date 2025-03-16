@@ -1,2 +1,4 @@
-package easy;public class RomanToInt {
+package easy;
+
+public class RomanToInt {
 }
