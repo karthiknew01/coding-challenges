@@ -12,11 +12,11 @@ public class SwapNodesInPair {
         head.next.next = new ListNode(3);
         head.next.next.next = new ListNode(4);
 
-        ListNode l3 = swapPairs(head);
+        head = swapPairs(head);
         do {
-            System.out.println(l3.val);
-            l3 = l3.next;
-        } while (l3 != null);
+            System.out.println(head.val);
+            head = head.next;
+        } while (head != null);
 
     }
 
