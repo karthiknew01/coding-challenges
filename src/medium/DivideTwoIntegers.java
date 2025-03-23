@@ -6,7 +6,6 @@ package medium;
 public class DivideTwoIntegers {
 
     public static void main(String[] args) {
-        System.out.println(-2147483648/-3);
         System.out.println(divide(-2147483648, -3));
     }
 
