@@ -1,10 +1,7 @@
 package hard;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
- * https://leetcode.com/problems/regular-expression-matching/description/
+ * <a href="https://leetcode.com/problems/regular-expression-matching/description/">...</a>
  */
 public class RegularExpressionMatch {
 
@@ -15,6 +12,7 @@ public class RegularExpressionMatch {
 
     public static boolean isMatch(String s, String p) {
         // Top Down Memorization
+        dp = new int[s.length()][p.length()];
         dp = new int[s.length()][p.length()];
         return dfs(0,0, s, p) == 1;
     }

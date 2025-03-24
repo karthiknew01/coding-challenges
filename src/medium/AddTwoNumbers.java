@@ -3,7 +3,7 @@ package medium;
 import medium.helper.ListNode;
 
 /**
- * https://leetcode.com/problems/add-two-numbers/submissions/1116725639/
+ * <a href="https://leetcode.com/problems/add-two-numbers/submissions/1116725639/">...</a>
  */
 public class AddTwoNumbers {
 

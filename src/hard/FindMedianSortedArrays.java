@@ -1,9 +1,7 @@
 package hard;
 
-import java.util.Arrays;
-
 /**
- * https://leetcode.com/problems/median-of-two-sorted-arrays/description/
+ * <a href="https://leetcode.com/problems/median-of-two-sorted-arrays/description/">...</a>
  */
 public class FindMedianSortedArrays {
     public static void main(String[] args) {
