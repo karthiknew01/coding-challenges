@@ -1,6 +1,6 @@
 package medium;
 
-import medium.helper.ListNode;
+import util.ListNode;
 
 /**
  * <a href="https://leetcode.com/problems/add-two-numbers/submissions/1116725639/">...</a>

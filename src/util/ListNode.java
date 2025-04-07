@@ -1,4 +1,4 @@
-package medium.helper;
+package util;
 
 //Definition for singly-linked list.
 public class ListNode {

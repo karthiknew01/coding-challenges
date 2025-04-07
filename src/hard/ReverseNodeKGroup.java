@@ -1,6 +1,6 @@
 package hard;
 
-import medium.helper.ListNode;
+import util.ListNode;
 
 /**
  * <a href="https://leetcode.com/problems/reverse-nodes-in-k-group/">...</a>

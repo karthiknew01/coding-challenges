@@ -1,6 +1,6 @@
 package hard;
 
-import medium.helper.ListNode;
+import util.ListNode;
 
 /**
  * <a href="https://leetcode.com/problems/merge-k-sorted-lists/">...</a>

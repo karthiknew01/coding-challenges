@@ -1,6 +1,6 @@
 package easy;
 
-import medium.helper.ListNode;
+import util.ListNode;
 
 /**
  * <a href="https://leetcode.com/problems/remove-duplicates-from-sorted-list/description/">...</a>

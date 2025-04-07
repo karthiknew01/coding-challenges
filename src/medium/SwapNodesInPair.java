@@ -1,6 +1,6 @@
 package medium;
 
-import medium.helper.ListNode;
+import util.ListNode;
 
 /**
  * <a href="https://leetcode.com/problems/swap-nodes-in-pairs/description/">...</a>
