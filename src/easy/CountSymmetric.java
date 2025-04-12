@@ -6,16 +6,21 @@ package easy;
 public class CountSymmetric {
 
     public static void main(String[] args) {
-        System.out.println(countSymmetricIntegers(1200,1230));
+        System.out.println(countSymmetricIntegers(1,10000));
     }
+
+
 
     public static int countSymmetricIntegers(int low, int high) {
         int symmetric = 0;
 
         low = Math.max(low, 11);
+        high = Math.min(high, 9999);
         for (int i = low; i <= high; i++) {
             String val = Integer.toString(i);
             int length = val.length();
+            if (length % 2 != 0)
+                i = 999;
             if (length % 2 == 0 && checkSum(val))
                 symmetric++;
         }
