@@ -17,7 +17,7 @@ public class MergeSortedArray {
         while (i >= 0 && j >= 0)
             nums1[k--] = (nums1[i] > nums2[j]) ? nums1[i--] : nums2[j--];
         while (j >= 0)
-            nums1[k--] = nums2[j--]; // Copy remaining nums2 elements
+            nums1[k--] = nums2[j--];
 
         for (int num: nums1) {
             System.out.println(num);
