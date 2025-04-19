@@ -1,7 +1,7 @@
 package easy;
 
 /**
- * https://leetcode.com/problems/largest-odd-number-in-string/?envType=daily-question&envId=2023-12-07
+ * <a href="https://leetcode.com/problems/largest-odd-number-in-string/?envType=daily-question&envId=2023-12-07">...</a>
  */
 public class LargestOddNumber {
 
@@ -12,9 +12,10 @@ public class LargestOddNumber {
 
     public static String largestOddNumber(String num) {
         int length = num.length();
-        for (int i = 1; i <= length; i++) {
-            if ((num.charAt(length - i) - 48) % 2 == 1)
-                return num.substring(0,length - i + 1);
+        for (int i = length - 1; i >= 0; i--) {
+            int c = Character.getNumericValue(num.charAt(i));
+            if (c % 2 == 1)
+                return num.substring(0, i + 1);
         }
         return "";
     }

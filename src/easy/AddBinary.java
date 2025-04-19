@@ -15,7 +15,8 @@ public class AddBinary {
             int aInt = i >= 0 ? a.charAt(i--) - 48 : 0;
             int bInt = j >= 0 ? b.charAt(j--) - 48 : 0;
             carry = aInt + bInt + carry;
-            binary.append(carry % 2); carry /= 2;
+            binary.append(carry % 2);
+            carry /= 2;
         }
         if (carry == 1) binary.append(carry);
 
