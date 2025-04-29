@@ -3,7 +3,7 @@ package medium;
 /**
  * <a href="https://leetcode.com/problems/count-subarrays-where-max-element-appears-at-least-k-times/description/?envType=daily-question&envId=2025-04-28">...</a>
  */
-public class CountSubArrayWhereMaxElementAppearsAtLeastKTImes {
+public class CountSubArrayWhereMaxElementAppearsAtLeastKTimes {
 
     public static void main(String[] args) {
         int[] nums = {28,5,58,91,24,91,53,9,48,85,16,70,91,91,47,91,61,4,54,61,49};
