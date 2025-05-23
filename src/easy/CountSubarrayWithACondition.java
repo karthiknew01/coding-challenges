@@ -5,20 +5,17 @@ package easy;
  */
 public class CountSubarrayWithACondition {
     public static void main(String[] args) {
-        int[] nums = {1,2,1,4,1};
+        int[] nums = {0,0,0,0};
         System.out.println(countSubarrays(nums));
     }
 
     public static int countSubarrays(int[] nums) {
         int res = 0;
         int n = nums.length;
-        for (int i = 0; i < n; i++) {
-            for (int j = i + 2; j < n; j++) {
-                int middle = (i + j) / 2;
-                if ((nums[i] + nums[j]) == 2 * nums[middle]) {
+        for (int i = 0; i + 2 < n; i++) {
+                if (2 * (nums[i] + nums[i+2]) == nums[i+1]) {
                     res++;
                 }
-            }
         }
 
         return res;
