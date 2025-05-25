@@ -8,7 +8,7 @@ import java.util.*;
 public class LongestPalindromeByConcatTwoLetter {
 
     public static void main(String[] args) {
-        String[] words = {"ab","ty","yt","lc","cl","ab"};
+        String[] words = {"lc","cl","gg"};
         System.out.println(longestPalindrome(words));
     }
 
@@ -24,11 +24,10 @@ public class LongestPalindromeByConcatTwoLetter {
             int freq = map.get(word);
             if (freq == 0)
                 continue;
-
             String reversed = new StringBuilder(word).reverse().toString();
             if (word.equals(reversed)) {
                 count += (freq / 2) * 4;
-                if (freq / 2 == 1) hasMiddle = true;
+                if (freq % 2 == 1) hasMiddle = true;
             } else if(map.containsKey(reversed)) {
                 int min = Math.min(freq, map.get(reversed));
                 count += min * 4;
