@@ -16,12 +16,12 @@ public class DistributeCandices {
     public static int distributeCandies(int[] candyType) {
         int eatable = candyType.length / 2;
 
-        Set<Integer> set = new HashSet<>();
+        Map<Integer, Boolean> map = new HashMap<>();
 
         for (int candy: candyType)
-            set.add(candy);
+            map.put(candy, true);
 
-        return Math.min(eatable, set.size());
+        return Math.min(eatable, map.size());
     }
 
 
