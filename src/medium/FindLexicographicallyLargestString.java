@@ -1,49 +1,53 @@
 package medium;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * <a href="https://leetcode.com/problems/find-the-lexicographically-largest-string-from-the-box-i/description/?envType=daily-question&envId=2025-06-04">...</a>
  */
 public class FindLexicographicallyLargestString {
 
     public static void main(String[] args) {
-        System.out.println(answerString("nbjnc", 2));
+        System.out.println(answerString("dbca", 2));
     }
-
-    static String maxString = "";
 
     public static String answerString(String word, int numFriends) {
-        maxString = "";
-        dfs(word, 0, numFriends, new ArrayList<>());
-        return maxString;
+        int n = word.length();
+        String[] dp = new String[n + 1];
+        dp[0] = ""; // base case
+
+        for (int k = 1; k <= numFriends; k++) {
+            String[] newDp = new String[n + 1];
+            String[] suffixMax = new String[n + 2];
+            suffixMax[n + 1] = "";
+
+            // Build suffix max from right to left for previous dp
+            for (int i = n; i >= 0; i--) {
+                String prev = dp[i] == null ? "" : dp[i];
+                suffixMax[i] = max(prev, suffixMax[i + 1]);
+            }
+
+            // Fill newDp using suffixMax
+            for (int i = k; i <= n; i++) {
+                String best = "";
+                for (int j = k - 1; j < i; j++) {
+                    String part = word.substring(j, i);
+                    if (dp[j] != null) {
+                        String candidate = max(dp[j], part);
+                        best = max(best, candidate);
+                    }
+                }
+                newDp[i] = best;
+            }
+
+            dp = newDp;
+        }
+
+        return dp[n];
     }
 
-    public static void dfs(String word, int start, int partsLeft, List<String> current) {
-        int n = word.length();
-
-        if (n - start < partsLeft) return;
-
-        if (partsLeft == 1) {
-            String lastPart = word.substring(start);
-            current.add(lastPart);
-            for (String part : current) {
-                if (part.compareTo(maxString) > 0) {
-                    maxString = part;
-                }
-            }
-            current.removeLast();
-            return;
-        }
-
-        // Try all possible cuts
-        for (int i = start + 1; i <= n - partsLeft + 1; i++) {
-            String part = word.substring(start, i);
-            current.add(part);
-            dfs(word, i, partsLeft - 1, current);
-            current.removeLast();
-        }
+    private static String max(String a, String b) {
+        if (a == null || a.isEmpty()) return b;
+        if (b == null || b.isEmpty()) return a;
+        return a.compareTo(b) > 0 ? a : b;
     }
 }
 
